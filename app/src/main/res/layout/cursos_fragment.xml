@@ -8,4 +8,11 @@
     android:layout_height="match_parent"
     tools:context=".activities.FragmentCursos">
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView_cursos"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="3dp"
+        android:scrollbars="vertical"/>
+
 </LinearLayout>

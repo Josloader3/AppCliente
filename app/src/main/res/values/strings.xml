@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">AppCliente</string>
+    <string name="txtTitulo_registrar">REGISTRO</string>
+    <string name="txtEmail_registrar">Ingrese Correo</string>
+    <string name="txtContraena_registrar">Ingrese contraseña.</string>
+    <string name="txtContrasena2_registrar">Repetir contraseña.</string>
+    <string name="btnGuardar_registrar">Guardar</string>
 </resources>

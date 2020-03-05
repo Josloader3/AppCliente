@@ -55,4 +55,8 @@ dependencies {
 
     //Maps
     implementation 'com.google.android.gms:play-services-maps:17.0.0'
+
+    //Room
+    implementation 'androidx.room:room-runtime:2.2.3'
+    annotationProcessor 'androidx.room:room-compiler:2.2.3'
 }

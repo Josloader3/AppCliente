@@ -1,5 +1,18 @@
 <resources>
     <string name="app_name">AppCliente</string>
+    <!--REGISTRO ACTIVITY-->
+    <string name="txtTitulo_registrar">REGISTRO</string>
+    <string name="txtEmail_registrar">Ingrese Correo</string>
+    <string name="txtContraena_registrar">Ingrese contraseña.</string>
+    <string name="txtContrasena2_registrar">Repetir contraseña.</string>
+    <string name="btnGuardar_registrar">Guardar</string>
+    <string name="title_activity_evento_map">Map</string>
+    <!--TABS-->
+    <string name="cursos_tab">Mis Cursos</string>
+    <string name="eventos_tab">Mis Eventos</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <string name="navigation_drawer_open">Open Navigation Drawer</string>
     <string name="navigation_drawer_close">Close Navigation Drawer</string>

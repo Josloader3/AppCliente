@@ -31,7 +31,8 @@
            android:theme="@style/AppTheme.NoActionBarLogin" />
         <activity android:name=".activities.MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
-
+        </activity>
+        <activity android:name=".EventoDetalleActivity">
         </activity>
     </application>
 

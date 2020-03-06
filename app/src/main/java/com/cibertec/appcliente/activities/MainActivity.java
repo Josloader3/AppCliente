@@ -35,8 +35,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //TOOLBAR
-        Toolbar mainToolBar = findViewById(R.id.toolbarMain);
-        setSupportActionBar(mainToolBar);
+        //Toolbar mainToolBar = findViewById(R.id.toolbarMain);
+        //setSupportActionBar(mainToolBar);
 
         //AÑADIMOS EL PAGER ADAPTER
         SectionsPagerAdapter pageAdapter = new SectionsPagerAdapter(getSupportFragmentManager(), BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);

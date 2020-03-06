@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <group android:checkableBehavior="single">
+
+        <item android:id="@+id/nav_eventos"
+            android:icon="@drawable/ic_evento"
+            android:title="@string/evento"/>
+        <item android:id="@+id/nav_cursos"
+            android:icon="@drawable/ic_cursos"
+            android:title="@string/cursos"/>
+        <item android:id="@+id/nav_mapa"
+            android:icon="@drawable/ic_map"
+            android:title="@string/ubicanos"/>
+    </group>
+    <item android:title="Mi perfil">
+        <menu>
+            <item android:id="@+id/nav_cuenta"
+                android:icon="@drawable/ic_cuenta"
+                android:title="@string/perfil"/>
+            <item android:id="@+id/nav_misEventos"
+                android:icon="@drawable/ic_mis_eventos"
+                android:title="@string/mis_eventos"/>
+            <item android:id="@+id/nav_misCursos"
+                android:icon="@drawable/ic_mis_cursos"
+                android:title="@string/mis_cursos"/>
+
+        </menu>
+    </item>
+
+</menu>

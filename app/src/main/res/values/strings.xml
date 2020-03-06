@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">AppCliente</string>
+
+    <string name="navigation_drawer_open">Open Navigation Drawer</string>
+    <string name="navigation_drawer_close">Close Navigation Drawer</string>
+    <string name="evento">Eventos</string>
+    <string name="cursos">Cursos</string>
+    <string name="ubicanos">Ubicanos</string>
+    <string name="perfil">Perfil</string>
+    <string name="mis_eventos">Mis Eventos</string>
+    <string name="mis_cursos">Mis Cursos</string>
 </resources>

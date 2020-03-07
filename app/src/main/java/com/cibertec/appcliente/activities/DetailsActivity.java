@@ -7,9 +7,10 @@ import android.widget.TextView;
 import com.cibertec.appcliente.R;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 public class DetailsActivity extends AppCompatActivity {
-
+    private Toolbar toolbar;
     TextView tv_Title;
     ImageView img_banner;
     TextView tv_description;

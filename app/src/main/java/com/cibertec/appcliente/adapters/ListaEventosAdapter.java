@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -16,6 +17,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.cibertec.appcliente.R;
 import com.cibertec.appcliente.activities.EventoDetalleActivity;
 import com.cibertec.appcliente.modelo.EventosModelo;
+import com.squareup.picasso.Picasso;
 
 public class ListaEventosAdapter extends RecyclerView.Adapter<ListaEventosAdapter.ViewHolder> {
 
@@ -39,6 +41,8 @@ public class ListaEventosAdapter extends RecyclerView.Adapter<ListaEventosAdapte
         final EventosModelo ev = dataset.get(position);
         holder.txvTitulo.setText(ev.getNombre());
         holder.txvfecha.setText(ev.getFecha() + " " +ev.getHora_ini());
+        holder.txv_descripcion.setText(ev.getDetalles());
+        Picasso.get().load("https://www.codigowebsite.app/cibertecapp/imagenes/"+ev.getUrl_foto()).into(holder.imv_evento);
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,14 +66,17 @@ public class ListaEventosAdapter extends RecyclerView.Adapter<ListaEventosAdapte
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
+        private TextView txv_descripcion;
+        private ImageView imv_evento;
         private TextView txvTitulo;
         private TextView txvfecha;
 
         public ViewHolder(View itemView){
             super(itemView);
-
-            txvTitulo = (TextView)itemView.findViewById(R.id.txv_titulo);
-            txvfecha = (TextView)itemView.findViewById(R.id.txv_fecha);
+            txv_descripcion = itemView.findViewById(R.id.txv_descripcion);
+            imv_evento = itemView.findViewById(R.id.imv_evento);
+            txvTitulo = itemView.findViewById(R.id.txv_titulo);
+            txvfecha = itemView.findViewById(R.id.txv_fecha);
         }
 
     }

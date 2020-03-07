@@ -1,4 +1,4 @@
-package com.cibertec.appcliente;
+package com.cibertec.appcliente.adapters;
 
 import android.content.Context;
 import android.content.Intent;
@@ -8,6 +8,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.cibertec.appcliente.modelo.Cursos;
+import com.cibertec.appcliente.R;
 import com.cibertec.appcliente.activities.DetailsActivity;
 import com.squareup.picasso.Picasso;
 

@@ -35,7 +35,7 @@
         <activity
             android:name=".activities.MainActivity"
             android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".EventoDetalleActivity"></activity>
+        <activity android:name=".activities.EventoDetalleActivity"></activity>
     </application>
 
 </manifest>

@@ -1,4 +1,4 @@
-package com.cibertec.appcliente;
+package com.cibertec.appcliente.modelo;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

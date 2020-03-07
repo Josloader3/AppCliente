@@ -1,4 +1,4 @@
-package com.cibertec.appcliente;
+package com.cibertec.appcliente.modelo;
 
 public class EventosModelo {
 

@@ -1,6 +1,9 @@
-package com.cibertec.appcliente.fragments;
+package com.cibertec.appcliente.Fragments;
 
 import android.os.Bundle;
+
+import androidx.fragment.app.Fragment;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,7 +13,6 @@ import com.cibertec.appcliente.R;
 import com.cibertec.appcliente.modelo.EventosModelo;
 
 import java.util.List;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -22,7 +24,9 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-
+/**
+ * A simple {@link Fragment} subclass.
+ */
 public class EventosFragment extends Fragment {
 
     private Retrofit retrofit;
@@ -81,6 +85,5 @@ public class EventosFragment extends Fragment {
 
             }
         });
-
     }
 }

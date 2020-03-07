@@ -8,9 +8,9 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.cibertec.appcliente.modelo.Cursos;
 import com.cibertec.appcliente.R;
 import com.cibertec.appcliente.activities.DetailsActivity;
+import com.cibertec.appcliente.modelo.Cursos;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -45,7 +45,7 @@ public class RecyclerViewAdapterCurso extends RecyclerView.Adapter<RecyclerViewA
 
         holder.tv_title.setText(lstCursos.get(position).getName());
         holder.tv_description.setText(lstCursos.get(position).getDesc());
-        Picasso.get().load(lstCursos.get(position).getImage()).into(MyViewHolder.img_banner);
+        Picasso.get().load("https://www.codigowebsite.app/cibertecapp/imagenes/"+lstCursos.get(position).getImage()).into(MyViewHolder.img_banner);
 
 
     }

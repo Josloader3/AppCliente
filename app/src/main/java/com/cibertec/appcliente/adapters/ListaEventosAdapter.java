@@ -13,9 +13,9 @@ import java.util.List;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.cibertec.appcliente.R;
 import com.cibertec.appcliente.activities.EventoDetalleActivity;
 import com.cibertec.appcliente.modelo.EventosModelo;
-import com.cibertec.appcliente.R;
 
 public class ListaEventosAdapter extends RecyclerView.Adapter<ListaEventosAdapter.ViewHolder> {
 

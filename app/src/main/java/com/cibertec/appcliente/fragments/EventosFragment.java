@@ -5,9 +5,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import com.cibertec.appcliente.api.EventoapiService;
-import com.cibertec.appcliente.modelo.EventosModelo;
 import com.cibertec.appcliente.adapters.ListaEventosAdapter;
 import com.cibertec.appcliente.R;
+import com.cibertec.appcliente.modelo.EventosModelo;
 
 import java.util.List;
 

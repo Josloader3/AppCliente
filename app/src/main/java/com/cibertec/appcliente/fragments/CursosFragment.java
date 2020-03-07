@@ -5,9 +5,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import com.cibertec.appcliente.api.ClientApi;
-import com.cibertec.appcliente.modelo.Cursos;
 import com.cibertec.appcliente.R;
 import com.cibertec.appcliente.adapters.RecyclerViewAdapterCurso;
+import com.cibertec.appcliente.modelo.Cursos;
 
 import java.util.ArrayList;
 import java.util.List;

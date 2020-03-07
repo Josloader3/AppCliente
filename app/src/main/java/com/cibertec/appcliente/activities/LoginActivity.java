@@ -50,7 +50,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 openRegistro();
                 break;
             case R.id.login_activity_btnLogin:
-                validarLogin();
+                //validarLogin();
+                openMenu();
                 break;
         }
     }

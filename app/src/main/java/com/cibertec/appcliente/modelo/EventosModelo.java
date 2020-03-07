@@ -1,17 +1,51 @@
 package com.cibertec.appcliente.modelo;
 
-public class EventosModelo {
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
 
-    private int id;
-    private String nombre;
-    private String detalles;
-    private String url_foto;
-    private int id_lugar;
-    private int id_tipo_evento;
-    private String fecha;
-    private String hora_ini;
-    private String hora_fin;
-    private String estado;
+import org.parceler.Parcel;
+
+@Parcel
+public class EventosModelo {
+    @SerializedName("id")
+    @Expose
+     int id;
+
+    @SerializedName("nombre")
+    @Expose
+    String nombre;
+
+    @SerializedName("detalles")
+    @Expose
+    String detalles;
+
+    @SerializedName("url_foto")
+    @Expose
+    String url_foto;
+
+    @SerializedName("id_lugar")
+    @Expose
+    int id_lugar;
+
+    @SerializedName("id_tipo_evento")
+    @Expose
+    int id_tipo_evento;
+
+    @SerializedName("fecha")
+    @Expose
+    String fecha;
+
+    @SerializedName("hora_ini")
+    @Expose
+    String hora_ini;
+
+    @SerializedName("hora_fin")
+    @Expose
+    String hora_fin;
+
+    @SerializedName("estado")
+    @Expose
+    int estado;
 
     public int getId() {
         return id;
@@ -85,11 +119,11 @@ public class EventosModelo {
         this.hora_fin = hora_fin;
     }
 
-    public String getEstado() {
+    public int getEstado() {
         return estado;
     }
 
-    public void setEstado(String estado) {
+    public void setEstado(int estado) {
         this.estado = estado;
     }
 
@@ -100,5 +134,21 @@ public class EventosModelo {
 
     public void setUrl_foto(String url_foto) {
         this.url_foto = url_foto;
+    }
+
+    @Override
+    public String toString() {
+        return "EventosModelo{" +
+                "id:" + id +
+                ", nombre:" + '\"'+ nombre + '\"' +
+                ", detalles:" + '\"' + detalles + '\"' +
+                ", url_foto:" + '\"' + url_foto + '\"' +
+                ", id_lugar:" + id_lugar +
+                ", id_tipo_evento:" + id_tipo_evento +
+                ", fecha:" + '\"' + fecha + '\"' +
+                ", hora_ini:" + '\"' + hora_ini + '\"' +
+                ", hora_fin:" + '\"' + hora_fin + '\"' +
+                ", estado:" + estado + '\'' +
+                '}';
     }
 }

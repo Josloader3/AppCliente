@@ -1,4 +1,6 @@
-package com.cibertec.appcliente;
+package com.cibertec.appcliente.api;
+
+import com.cibertec.appcliente.modelo.Cursos;
 
 import java.util.List;
 

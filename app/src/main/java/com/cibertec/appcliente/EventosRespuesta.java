@@ -1,5 +1,7 @@
 package com.cibertec.appcliente;
 
+import com.cibertec.appcliente.modelo.EventosModelo;
+
 import java.util.ArrayList;
 
 public class EventosRespuesta {

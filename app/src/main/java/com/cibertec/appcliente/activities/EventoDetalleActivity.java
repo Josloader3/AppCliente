@@ -1,8 +1,10 @@
-package com.cibertec.appcliente;
+package com.cibertec.appcliente.activities;
 
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.cibertec.appcliente.R;
 
 public class EventoDetalleActivity extends AppCompatActivity {
 

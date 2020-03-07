@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import com.cibertec.appcliente.ClientApi;
 import com.cibertec.appcliente.Cursos;
 import com.cibertec.appcliente.R;
@@ -80,5 +79,4 @@ public class CursosFragment extends Fragment {
         super.onCreate(savedInstanceState);
         getServices();
     }
-
 }

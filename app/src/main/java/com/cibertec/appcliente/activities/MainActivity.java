@@ -1,7 +1,20 @@
 package com.cibertec.appcliente.activities;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+
+import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 import com.cibertec.appcliente.R;
 import com.cibertec.appcliente.fragments.CursosFragment;
@@ -50,7 +63,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         //Button Navigation View
         bottomNav = findViewById(R.id.bottom_navigation_main);
         bottomNav.setOnNavigationItemSelectedListener(navBotonListener);
-
     }
     //onBackPressed() => Metodo para el Menu Navigation view
     public void onBackPressed(){

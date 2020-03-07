@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import com.cibertec.appcliente.EventoapiService;
 import com.cibertec.appcliente.EventosModelo;
 import com.cibertec.appcliente.ListaEventosAdapter;
@@ -84,5 +83,4 @@ public class EventosFragment extends Fragment {
         });
 
     }
-
 }

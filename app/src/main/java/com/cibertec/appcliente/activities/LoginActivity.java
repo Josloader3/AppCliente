@@ -50,8 +50,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 openRegistro();
                 break;
             case R.id.login_activity_btnLogin:
-                //validarLogin();
-                openMenu();
+                validarLogin();
+                //openMenu();
                 break;
         }
     }
@@ -88,9 +88,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     }
 
     private void openRegistro() {
-        /*Intent intent = new Intent(LoginActivity.this, RegistroActivity.class);
+        Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
         startActivity(intent);
-        finish();*/
+        //finish();
     }
 
     private void openMenu(){

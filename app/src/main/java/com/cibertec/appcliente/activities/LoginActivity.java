@@ -1,16 +1,16 @@
 package com.cibertec.appcliente.activities;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import com.cibertec.appcliente.R;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class LoginActivity extends AppCompatActivity {
     private static final String TAG = "LOGIN_ACTIVITY";
@@ -33,14 +33,16 @@ public class LoginActivity extends AppCompatActivity {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //openActivity();
-                Toast.makeText(getApplicationContext(), "Abrir la siguiente Activity", Toast.LENGTH_SHORT).show();
+                openActivity();
+               // Toast.makeText(getApplicationContext(), "Abrir la siguiente Activity", Toast.LENGTH_SHORT).show();
                 Log.i(TAG, "onClick: ");
             }
         });
     }
 
     private void openActivity() {
-
+        Intent intentOpenMainActivity = new Intent(this, MainActivity.class);
+        startActivity(intentOpenMainActivity);
+        Log.i(TAG, "openActivity: ");
     }
 }

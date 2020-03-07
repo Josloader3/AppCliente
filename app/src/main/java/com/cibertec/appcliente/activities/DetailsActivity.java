@@ -1,14 +1,12 @@
 package com.cibertec.appcliente.activities;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.cibertec.appcliente.R;
-import com.cibertec.appcliente.data.Cursos;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class DetailsActivity extends AppCompatActivity {
 
@@ -25,22 +23,20 @@ public class DetailsActivity extends AppCompatActivity {
 
         String headerCode = "";
         String descripcion = "";
-        int img = 0;
+        //int img = 0;
         Bundle extras = getIntent().getExtras();
         if(extras != null ){
             headerCode = extras.getString("headerCode");
             descripcion = extras.getString("description");
-            img = extras.getInt("img");
+            //img = extras.getInt("img");
         }
         tv_Title.setText(headerCode);
         tv_description.setText(descripcion);
-        img_banner.setImageResource(img);
+        //img_banner.setImageResource(img);
 
 
 
-        //Cursos cursos = getIntent().getParcelableExtra(EXTRA_SEND);
 
-        //tv_Title.setText(cursos.getName());
 
     }
 }

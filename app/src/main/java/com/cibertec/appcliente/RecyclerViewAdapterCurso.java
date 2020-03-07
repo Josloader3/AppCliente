@@ -1,32 +1,22 @@
-package com.cibertec.appcliente.adapter;
+package com.cibertec.appcliente;
 
 import android.content.Context;
 import android.content.Intent;
-import android.os.Parcelable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.bumptech.glide.Glide;
-import com.cibertec.appcliente.R;
 import com.cibertec.appcliente.activities.DetailsActivity;
-import com.cibertec.appcliente.activities.LoginActivity;
-import com.cibertec.appcliente.activities.MainActivity;
-import com.cibertec.appcliente.data.Cursos;
 import com.squareup.picasso.Picasso;
 
-import org.parceler.Parcels;
-
-import java.nio.LongBuffer;
 import java.util.ArrayList;
-import java.util.List;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class RecyclerViewAdapterCurso extends RecyclerView.Adapter<RecyclerViewAdapterCurso.MyViewHolder> {
+public class RecyclerViewAdapterCurso extends RecyclerView.Adapter<RecyclerViewAdapterCurso.MyViewHolder>{
 
     Context mcontext;
     private ArrayList<Cursos> lstCursos =new ArrayList<>();
@@ -93,10 +83,10 @@ public class RecyclerViewAdapterCurso extends RecyclerView.Adapter<RecyclerViewA
 
             switch (itemPosition){
                 //case 0:
-                    //User user = userDao.getUser();
-                    //intent =  new Intent(context, MainActivity.class);
-                    // intent.putExtra("User", user);
-                   // break;
+                //User user = userDao.getUser();
+                //intent =  new Intent(context, MainActivity.class);
+                // intent.putExtra("User", user);
+                // break;
 
 
                 default:

@@ -23,6 +23,13 @@ import com.cibertec.appcliente.fragments.UbicanosFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
     private Toolbar toolbar;
@@ -44,7 +51,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         navigationView.setNavigationItemSelectedListener(this);
 
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,drawer,toolbar,
-                R.string.navigation_drawer_open,R.string.navigation_drawer_close);
+                R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         if(savedInstanceState == null) {
@@ -56,7 +63,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         //Button Navigation View
         bottomNav = findViewById(R.id.bottom_navigation_main);
         bottomNav.setOnNavigationItemSelectedListener(navBotonListener);
-
     }
     //onBackPressed() => Metodo para el Menu Navigation view
     public void onBackPressed(){

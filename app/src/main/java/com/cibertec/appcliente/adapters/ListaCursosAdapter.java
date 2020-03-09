@@ -9,8 +9,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.cibertec.appcliente.R;
-import com.cibertec.appcliente.activities.DetailsActivity;
-import com.cibertec.appcliente.modelo.Cursos;
+import com.cibertec.appcliente.activities.CursoDetalleActivity;
+import com.cibertec.appcliente.modelo.Curso;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -18,13 +18,13 @@ import java.util.ArrayList;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class RecyclerViewAdapterCurso extends RecyclerView.Adapter<RecyclerViewAdapterCurso.MyViewHolder>{
+public class ListaCursosAdapter extends RecyclerView.Adapter<ListaCursosAdapter.MyViewHolder>{
 
     Context mcontext;
-    private ArrayList<Cursos> lstCursos =new ArrayList<>();
+    private ArrayList<Curso> lstCursos =new ArrayList<>();
 
 
-    public RecyclerViewAdapterCurso(Context mcontext, ArrayList<Cursos> lstCursos) {
+    public ListaCursosAdapter(Context mcontext, ArrayList<Curso> lstCursos) {
         this.mcontext = mcontext;
         this.lstCursos = lstCursos;
 
@@ -64,7 +64,7 @@ public class RecyclerViewAdapterCurso extends RecyclerView.Adapter<RecyclerViewA
 
 
         private final Context context;
-        private Cursos lstCursos;
+        private Curso lstCursos;
 
 
         public MyViewHolder(@NonNull View itemView) {
@@ -92,7 +92,7 @@ public class RecyclerViewAdapterCurso extends RecyclerView.Adapter<RecyclerViewA
 
 
                 default:
-                    intent =  new Intent(context, DetailsActivity.class);
+                    intent =  new Intent(context, CursoDetalleActivity.class);
                     //intent.putExtra("title",  lstCursos.get(itemPosition));
                     intent.putExtra("headerCode", tv_title.getText());
                     intent.putExtra("description", tv_description.getText());

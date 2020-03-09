@@ -1,4 +1,4 @@
-package com.cibertec.appcliente.Fragments;
+package com.cibertec.appcliente.fragments;
 
 import android.os.Bundle;
 
@@ -7,29 +7,23 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import com.cibertec.appcliente.api.EventoapiService;
+
+import com.cibertec.appcliente.api.ApiClient;
+import com.cibertec.appcliente.interfaces.EventoService;
 import com.cibertec.appcliente.adapters.ListaEventosAdapter;
 import com.cibertec.appcliente.R;
-import com.cibertec.appcliente.modelo.EventosModelo;
+import com.cibertec.appcliente.modelo.Evento;
 
 import java.util.List;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
 
-/**
- * A simple {@link Fragment} subclass.
- */
 public class EventosFragment extends Fragment {
-
-    private Retrofit retrofit;
 
     private RecyclerView recyclerView;
     private ListaEventosAdapter listaEventosAdapter;
@@ -45,11 +39,6 @@ public class EventosFragment extends Fragment {
         LinearLayoutManager linearManager = new LinearLayoutManager(getActivity()); //
         recyclerView.setLayoutManager(linearManager);
 
-        retrofit = new Retrofit.Builder()
-                .baseUrl("https://www.codigowebsite.app/cibertecapp/")
-                .addConverterFactory(GsonConverterFactory.create())
-                .build();
-
         obtenerDatos();
 
         return view;
@@ -62,15 +51,17 @@ public class EventosFragment extends Fragment {
     }
 
     private void obtenerDatos() {
-        EventoapiService service = retrofit.create(EventoapiService.class);
-        Call<List<EventosModelo>> eventosRespuestaCall = service.obtenerListaEventos();
 
-        eventosRespuestaCall.enqueue(new Callback<List<EventosModelo>>() {
+        EventoService eventoService = ApiClient.getApiClient()
+                .create(EventoService.class);
+        Call<List<Evento>> eventosRespuestaCall = eventoService.obtenerListaEventos();
+
+        eventosRespuestaCall.enqueue(new Callback<List<Evento>>() {
             @Override
-            public void onResponse(Call<List<EventosModelo>> call, Response<List<EventosModelo>> response) {
+            public void onResponse(Call<List<Evento>> call, Response<List<Evento>> response) {
                 if(response.isSuccessful()){
 
-                    List<EventosModelo> eventosRespuesta = response.body();
+                    List<Evento> eventosRespuesta = response.body();
                     // ArrayList<EventosModelo> listaeventos = eventosRespuesta.getResults();
 
                     listaEventosAdapter.adicionarListaEventos(eventosRespuesta);
@@ -81,7 +72,7 @@ public class EventosFragment extends Fragment {
             }
 
             @Override
-            public void onFailure(Call<List<EventosModelo>> call, Throwable t) {
+            public void onFailure(Call<List<Evento>> call, Throwable t) {
 
             }
         });

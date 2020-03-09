@@ -16,12 +16,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.cibertec.appcliente.R;
 import com.cibertec.appcliente.activities.EventoDetalleActivity;
-import com.cibertec.appcliente.modelo.EventosModelo;
+import com.cibertec.appcliente.modelo.Evento;
 import com.squareup.picasso.Picasso;
 
 public class ListaEventosAdapter extends RecyclerView.Adapter<ListaEventosAdapter.ViewHolder> {
 
-    private List<EventosModelo> dataset;
+    private List<Evento> dataset;
     private Activity activity;
 
     public ListaEventosAdapter(Activity activity){
@@ -38,7 +38,7 @@ public class ListaEventosAdapter extends RecyclerView.Adapter<ListaEventosAdapte
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        final EventosModelo ev = dataset.get(position);
+        final Evento ev = dataset.get(position);
         holder.txvTitulo.setText(ev.getNombre());
         holder.txvfecha.setText(ev.getFecha() + " " +ev.getHora_ini());
         holder.txv_descripcion.setText(ev.getDetalles());
@@ -59,7 +59,7 @@ public class ListaEventosAdapter extends RecyclerView.Adapter<ListaEventosAdapte
         return dataset.size(); // return 0; jamas en 0 porque sino no va actualizar nada porque creera que la lista esta vacia
     }
 
-    public void adicionarListaEventos(List<EventosModelo> listaeventos) {
+    public void adicionarListaEventos(List<Evento> listaeventos) {
         dataset.clear(); //Se limpia la lista
         dataset.addAll(listaeventos);
         notifyDataSetChanged(); // actualizar el recycler en pantalla

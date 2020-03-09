@@ -6,7 +6,7 @@ import com.google.gson.annotations.SerializedName;
 import org.parceler.Parcel;
 
 @Parcel
-public class EventosModelo {
+public class Evento {
     @SerializedName("id")
     @Expose
      int id;

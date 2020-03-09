@@ -1,18 +1,18 @@
 package com.cibertec.appcliente;
 
-import com.cibertec.appcliente.modelo.EventosModelo;
+import com.cibertec.appcliente.modelo.Evento;
 
 import java.util.ArrayList;
 
 public class EventosRespuesta {
 
-    private ArrayList<EventosModelo> results;
+    private ArrayList<Evento> results;
 
-    public ArrayList<EventosModelo> getResults() {
+    public ArrayList<Evento> getResults() {
         return results;
     }
 
-    public void setResults(ArrayList<EventosModelo> results) {
+    public void setResults(ArrayList<Evento> results) {
         this.results = results;
     }
 }

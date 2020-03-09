@@ -9,7 +9,7 @@ import com.cibertec.appcliente.R;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-public class DetailsActivity extends AppCompatActivity {
+public class CursoDetalleActivity extends AppCompatActivity {
     private Toolbar toolbar;
     TextView tv_Title;
     ImageView img_banner;
@@ -17,7 +17,7 @@ public class DetailsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_details);
+        setContentView(R.layout.activity_curso_detalle);
         tv_Title = findViewById(R.id.tv_Title);
         tv_description = findViewById(R.id.tv_description);
         img_banner = findViewById(R.id.img_banner);

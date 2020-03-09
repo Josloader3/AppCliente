@@ -22,7 +22,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private Toolbar toolbar;
     private DrawerLayout drawer;
     private NavigationView navigationView;
-    private BottomNavigationView bottomNav;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,10 +45,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     new EventosFragment()).commit();
             navigationView.setCheckedItem(R.id.nav_eventos);
         }
-
-        //Button Navigation View
-        bottomNav = findViewById(R.id.bottom_navigation_main);
-        bottomNav.setOnNavigationItemSelectedListener(navBotonListener);
     }
     //onBackPressed() => Metodo para el Menu Navigation view
     public void onBackPressed(){
@@ -82,31 +77,4 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
-    //Creamos el Bottom Navigation Listener:
-    private BottomNavigationView.OnNavigationItemSelectedListener navBotonListener=
-            new BottomNavigationView.OnNavigationItemSelectedListener() {
-                @Override
-                public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-
-                    switch (item.getItemId()){
-                        case R.id.btn_nav_eventos:
-                            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                                    new EventosFragment()).commit();
-                            toolbar.setTitle(R.string.evento);
-                            break;
-                        case R.id.btn_nav_cursos:
-                            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                                    new CursosFragment()).commit();
-                            toolbar.setTitle(R.string.cursos);
-                            break;
-                        case R.id.btn_nav_mapa:
-                            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                                    new UbicanosFragment()).commit();
-                            toolbar.setTitle(R.string.ubicanos);
-                            break;
-                    }
-                    return true;
-                }
-            };
-
 }

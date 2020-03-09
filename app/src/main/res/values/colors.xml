@@ -8,4 +8,6 @@
     <color name="colorAzulPrimaryDark">#001ddb</color>
     <color name="colorAzulPrimary">#5c26bf</color>
     <color name="colorAzulTexto">#3a1878</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBlack">#000000</color>
 </resources>
